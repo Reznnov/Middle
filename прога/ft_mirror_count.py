@@ -12,6 +12,14 @@ def ft_rev_num(a):
 def ft_mirror_num(x):
     rev = ft_rev_num(x)
     if x == rev:
-        return "TRUE"
+        return True
     else:
-        return "FALSE"
+        return False
+
+
+def ft_mirror_count(b):
+    n = 0
+    for i in range(1, b + 1):
+        if ft_mirror_num(i) is True:
+            n += 1
+    return n

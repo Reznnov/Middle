@@ -1,16 +1,8 @@
-def ft_len_num(x):
-    i = 0
-    while x > 0:
-        x = x // 10
-        i += 1
-    return i
-
-
 def ft_bin_num(a):
-    b = ""
+    desit = 1
+    it = 0
     while a > 0:
-        b += str(a % 2)
-        a = a // 2
-    b = b[::-1]
-    return int(b)
-    
+        it += a % 2 * desit
+        desit *= 10
+        a //= 2
+    return it

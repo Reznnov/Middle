@@ -20,10 +20,13 @@ def ft_second_max_num(a):
     maxx = ft_max_num(a)
     minn = ft_min_num(a)
     itog = -1
-    for i in str(a):
-        if maxx > int(i) > minn:
-            if itog < int(i):
-                itog = int(i)
+    i = 0
+    while a > 0:
+        i = a % 10
+        if maxx > i > minn:
+            if itog < i:
+                itog = i
+        a = a // 10
     if itog == -1:
         return maxx
     else:
